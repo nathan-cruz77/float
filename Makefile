@@ -1,9 +1,8 @@
 init:
 	pip install -e .
 
-test: init
-	python tests/test_*
-	rm -rf float_range.egg-info
+test:
+	python tests/*.py
 
 readme:
 	pandoc --output=README --to rst README.md
